@@ -1,0 +1,25 @@
+image:
+  file: .gitpod/Dockerfile
+
+tasks:
+  - name: Setup Environment
+    init: |
+      echo "Setting up ROM Builder environment..."
+      sudo apt-get update
+      sudo apt-get install -y python3 python3-pip aria2 p7zip-full zip unzip curl wget git bash
+      sudo chmod +x scripts/*.sh tools/* 2>/dev/null || true
+      pip3 install -r web/requirements.txt
+    command: |
+      echo "Environment ready!"
+      echo "Starting web server..."
+      cd web && python3 app.py
+
+ports:
+  - port: 5000
+    onOpen: open-browser
+    visibility: public
+
+vscode:
+  extensions:
+    - ms-python.python
+    - ms-python.vscode-pylance

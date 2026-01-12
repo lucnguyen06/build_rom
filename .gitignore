@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Build outputs
+*_fastboot.zip
+*.img
+recovery_rom.zip
+fastboot_flasher.zip
+
+# Workspace
+*.zip
+*.tar.gz
+*.tar
+
+# Device directories
+houji/
+garnet/
+marble/
+*/
+
+# Temporary
+super_maker/
+zip/
+magisk/
+Builder/
+smali/
+
+# Config
+.build_config.json
+.build_config.bat
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
